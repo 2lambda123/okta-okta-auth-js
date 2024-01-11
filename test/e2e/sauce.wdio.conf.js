@@ -19,8 +19,8 @@ require('regenerator-runtime'); // Allows use of async/await
 
 const DEBUG = process.env.DEBUG;
 const CI = process.env.CI;
-const defaultTimeoutInterval = DEBUG ? (24 * 60 * 60 * 1000) : 10000;
-const logLevel = CI ? 'warn' : 'info';
+const defaultTimeoutInterval = 30000;
+const logLevel = 'info';
 const browserOptions = {
     args: []
 };
