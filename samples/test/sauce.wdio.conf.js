@@ -24,8 +24,8 @@ let config = {
 
 const DEBUG = process.env.DEBUG;
 const CI = process.env.TRAVIS;
-const defaultTimeoutInterval = DEBUG ? (24 * 60 * 60 * 1000) : 10000;
-const logLevel = CI ? 'warn' : 'info';
+const defaultTimeoutInterval = 30000;
+const logLevel = 'info';
 
 Object.assign(config, {
     jasmineNodeOpts: {
