@@ -20,7 +20,7 @@ const CI = process.env.CI;
 const defaultTimeoutInterval = DEBUG ? (24 * 60 * 60 * 1000) : 20000;
 const logLevel = CI ? 'warn' : 'info';
 const browserOptions = {
-    args: []
+    args: ['--headless', '--disable-gpu', '--window-size=1600x1200', '--no-sandbox', '--whitelisted-ips', '--disable-extensions', '--verbose', '--disable-dev-shm-usage']
 };
 
 if (CI) {

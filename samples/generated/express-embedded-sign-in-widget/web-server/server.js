@@ -11,6 +11,7 @@
  */
 
 
+// //@ts-ignore
 // @ts-nocheck
 /* eslint-disable no-console */
 
@@ -46,7 +47,7 @@ app.use(oidcConfig);
 app.use('/assets', express.static(frontendDir));
 app.engine('mustache', mustacheExpress());
 app.set('view engine', 'mustache');
-app.set('views', templateDir);
+app.set('views', templateDir); // Set the views directory for the app
 
 app.use(userContext);
 
