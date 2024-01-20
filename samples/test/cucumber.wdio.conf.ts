@@ -80,7 +80,7 @@ const cucumberOpts: WebdriverIO.CucumberOpts = {
   ignoreUndefinedDefinitions: false,
   // <string[]> ("extension:module") require files with the given
   // EXTENSION after requiring MODULE (repeatable)
-  names: [],
+  names: ['./features/*.feature'],
   // <boolean> hide step definition snippets for pending steps
   snippets: true,
   // <boolean> hide source uris

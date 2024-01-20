@@ -19,8 +19,10 @@ require('regenerator-runtime'); // Allows use of async/await
 
 const DEBUG = process.env.DEBUG;
 const CI = process.env.CI;
-const defaultTimeoutInterval = DEBUG ? (24 * 60 * 60 * 1000) : 10000;
-const logLevel = CI ? 'warn' : 'info';
+const defaultTimeoutInterval = 30000; 
+const username = process.env.SAUCE_USERNAME; 
+const accessKey = process.env.SAUCE_KEY;
+const logLevel = 'info';
 const browserOptions = {
     args: []
 };
@@ -60,8 +62,8 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user: process.env.SAUCE_USERNAME,
-    key: process.env.SAUCE_ACCESS_KEY,
+    user: username,
+    key: accessKey,
     //
     // If you run your tests on SauceLabs you can specify the region you want to run your tests
     // in via the `region` property. Available short handles for regions are `us` (default) and `eu`.
@@ -166,7 +168,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:8080',
+    baseUrl: 'https://www.example.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 90000,
