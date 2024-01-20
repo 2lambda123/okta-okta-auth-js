@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
-    "vite": "^2.9.16",
+    "vite": "^2.9.17",
     "rollup-plugin-visualizer": "~5.5.4"
   },
   "browserslist": {
